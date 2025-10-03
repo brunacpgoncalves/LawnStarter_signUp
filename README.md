@@ -16,7 +16,10 @@
    git clone https://github.com/brunacpgoncalves/LawnStarter_signUp.git
    cd LawnStarter_signUp
 
-2. **Install dependencies**: npm install or yarn install
+2. **Install dependencies**
+npm install
+or
+yarn install
 
 3. **Open Cypres in interactive mode**: npx cypress open or **Run Cypress in headless mode**: npx cypress run
 
@@ -24,22 +27,22 @@
 
 # Project Structure
 cypress/
- ├─ data/                         # Test data
- │   └─ signUpTestData.js
- ├─ e2e/                          # Test specs
- │   └─ signUp.cy.js
- ├─ locators/                     # Page locators
- │   ├─ accountPaymentPage.locators.js
- │   ├─ extraServicesPage.locators.js
- │   ├─ quoteQuestionsPage.locators.js
- │   └─ schedulingPage.locators.js
- ├─ pages/                        # Page objects
- │   ├─ accountPaymentPage.js
- │   ├─ extraServicesPage.js
- │   ├─ quoteQuestionsPage.js
- │   └─ schedulingPage.js
- └─ support/
-     └─ commands.js
+ ├── data/                      # Test data
+ │   └── signUpTestData.js
+ ├── e2e/                       # Test specs
+ │   └── signUp.cy.js
+ ├── locators/                  # Page locators
+ │   ├── accountPaymentPage.locators.js
+ │   ├── extraServicesPage.locators.js
+ │   ├── quoteQuestionsPage.locators.js
+ │   └── schedulingPage.locators.js
+ ├── pages/                     # Page objects
+ │   ├── accountPaymentPage.js
+ │   ├── extraServicesPage.js
+ │   ├── quoteQuestionsPage.js
+ │   └── schedulingPage.js
+ └── support/
+     └── commands.js
      
 - locators/ → Central place for selectors.
 
@@ -63,10 +66,15 @@ The **sign up happy-path** flow covered:
 
 # Notes
 
-Screenshots and videos are automatically saved on failure (cypress/screenshots, cypress/videos).
-All tests run against https://dev-signup-web.lawnstarter.com - configured in cypress.config.js.
-Pop-ups like "Save Card" may appear in some browsers but do not block automation.
-No cy.intercept() or network stubbing is used — tests rely purely on UI behavior.
-Runtime ~20–25s per full happy-path run.
-For flakiness or faster execution, network intercepts could be added later.
+- Screenshots and videos are automatically saved on failure (cypress/screenshots, cypress/videos).
+
+- All tests run against https://dev-signup-web.lawnstarter.com - configured in cypress.config.js.
+
+- Pop-ups like "Save Card" may appear in some browsers but do not block automation.
+
+- No cy.intercept() or network stubbing is used — tests rely purely on UI behavior.
+
+- Runtime ~20–25s per full happy-path run.
+
+- For flakiness or faster execution, network intercepts could be added later.
 
