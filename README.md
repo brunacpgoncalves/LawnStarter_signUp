@@ -25,30 +25,31 @@ yarn install
 
 4. **Example Run**: npx cypress run --spec "cypress/e2e/signUp.cy.js"
 
-# Project Structure
-cypress/
- ├── data/                      # Test data
- │   └── signUpTestData.js
- ├── e2e/                       # Test specs
- │   └── signUp.cy.js
- ├── locators/                  # Page locators
- │   ├── accountPaymentPage.locators.js
- │   ├── extraServicesPage.locators.js
- │   ├── quoteQuestionsPage.locators.js
- │   └── schedulingPage.locators.js
- ├── pages/                     # Page objects
- │   ├── accountPaymentPage.js
- │   ├── extraServicesPage.js
- │   ├── quoteQuestionsPage.js
- │   └── schedulingPage.js
- └── support/
-     └── commands.js
+## Project Structure
+
+- cypress/
+  - data/
+    - signUpTestData.js
+  - e2e/
+    - signUp.cy.js
+  - locators/
+    - accountPaymentPage.locators.js
+    - extraServicesPage.locators.js
+    - quoteQuestionsPage.locators.js
+    - schedulingPage.locators.js
+  - pages/
+    - accountPaymentPage.js
+    - extraServicesPage.js
+    - quoteQuestionsPage.js
+    - schedulingPage.js
+  - support/
+    - commands.js
      
-- locators/ → Central place for selectors.
 
-- pages/ → Page Object Model (POM) classes, each wrapping locators + actions.
+- **locators/** → Central place for selectors.  
+- **pages/** → Page Object Model (POM) classes, wrapping locators + actions.  
+- **data/** → Minimal static test data (e.g., card details). Dynamic values (like email) come from faker.js.  
 
-- data/ → Minimal static test data (e.g., card details). Dynamic values (like email) come from faker.js.
 
 # Project Overview
 
