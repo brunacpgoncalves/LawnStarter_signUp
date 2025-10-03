@@ -13,7 +13,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/brunacpgoncalves/LawnStarter_signUp.git
    cd LawnStarter_signUp
 
 2. **Install dependencies**: npm install or yarn install
